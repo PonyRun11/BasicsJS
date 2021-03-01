@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+    class A {
+      constructor(units, tens, hundereds) {
+        this.units = units;
+        this.tens = tens;
+        this.hundereds = hundereds;
+      }
+
+      name(number) {
+        if (number <= 999 && number >= 0 && Number.isInteger(number) && typeof(number) == 'number') {
+        this.hundereds = Math.floor(number / 100);
+        this.tens = Math.floor((number % 100) / 10);
+        this.units = number % 10;
+      } else {
+        console.log("Число передано вне [0, 999] диапазона, не целое число или вообще не число");
+        number = {};
+      }
+    }
+    
+    }
+
+    const number1 = new A();
+    number1.name(+prompt('Введите число от 0 до 999'));
+
+    console.log(number1);
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
