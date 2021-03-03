@@ -18,7 +18,7 @@
       }
 
       name(number) {
-        if (number <= 999 && number >= 0 && Number.isInteger(number) && typeof(number) == 'number') {
+        if (number <= 999 && number >= 0 && Number.isInteger(number)) {
         this.hundereds = Math.floor(number / 100);
         this.tens = Math.floor((number % 100) / 10);
         this.units = number % 10;
