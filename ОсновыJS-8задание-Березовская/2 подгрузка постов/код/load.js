@@ -12,9 +12,10 @@ function init() {
     // init.
     if (window.innerHeight === document.body.offsetHeight) {
         insertPosts();
+        init();
     }
 }
-init();
+
 
 document.addEventListener('scroll', function(event) {
     if (scrollCheck.getBoundingClientRect().top <= window.innerHeight) {
@@ -33,7 +34,7 @@ function insertPosts() {
     let postsMarkup = '';
     for (let i = 0; i < 3; i++) {
         postsMarkup += getPostMarkup(i)
-    };
+    }
     
     scrollCheck.insertAdjacentHTML('beforebegin', postsMarkup);
     // 3.2 Перед scrollCheck вставьте записанную в postsMarkup разметку
