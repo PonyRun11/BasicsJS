@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        let bankAccount = prompt("Введите сумму пополнения Вашего счета");
+
+        let numberLength = bankAccount.length - 1;
+
+        if (bankAccount.charAt(numberLength - 1)  == 1 ) {
+            alert(`Ваша сумма в ${bankAccount} рублей успешно зачислена`);
+        } else if (bankAccount.charAt(numberLength) == 1) {
+            alert(`Ваша сумма в ${bankAccount} рубль успешно зачислена`);
+        } else if (bankAccount.charAt(numberLength) == 2 || bankAccount.charAt(numberLength) == 3 || bankAccount.charAt(numberLength) == 4) {
+            alert(`Ваша сумма в ${bankAccount} рубля успешно зачислена`);
+        } else if (bankAccount.charAt(numberLength) == 5 || bankAccount.charAt(numberLength) == 6 || bankAccount.charAt(numberLength) == 7 || bankAccount.charAt(numberLength) == 8 || bankAccount.charAt(numberLength) == 9) {
+            alert(`Ваша сумма в ${bankAccount} рублей успешно зачислена`);
+        } 
+        
+
+    </script>
+
+
+</body>
+</html>
